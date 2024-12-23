@@ -1,0 +1,5 @@
+supported file: ["mp4", "avi"]
+description: Deep learning-based method for Video Face Forgery Detection that separates the spatial and temporal weights into two groups and alternately freezes one group of weights to encourage the model to capture both the spatial and temporal artifacts.
+scope: Input requires a single Human face video. The videos should be less than 2 mins and less than 2k resolution.
+reference: "https://arxiv.org/abs/2307.08317"
+code_reference: "https://github.com/ZhendongWang6/AltFreezing"

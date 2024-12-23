@@ -1,0 +1,34 @@
+{
+  "altfreezing": {
+    "task": "Video Face Forgery Detection",
+    "analytic_name": "AltFreezing",
+    "image_name": "altfreezing",
+    "modality": ["video"],
+    "analytic_description": "Deep learning based method for Video Face Forgery Detection that separates the spatial and temporal weights into two groups and alternately freezes one group of weights to encourage the model to capture both the spatial and temporal artifacts.",
+    "analysis_scope": "Human face videos",
+    "paper_reference": "https://arxiv.org/abs/2307.08317",
+    "code_reference": "https://github.com/ZhendongWang6/AltFreezing",
+    "scope": {
+      "video": ["mp4", "avi"]
+    },
+    "scope_all": ["mp4", "avi"],
+    "result_description": "The probability of input video is real",
+    "advanced_result": "",
+    "usage": "Example: $ docker run -it --gpus 1 -v /home/ubmdfl/Documents/Media/:/Media altfreezing python main.py --input_path /Media/new_pipelines/altfreezing/Test_Data/test_video1.mp4 --output_path /Media/new_pipelines/altfreezing/Test_Data",
+    "args": {
+      "input_path": "String type, video file path. The video must be at least 5 seconds long and have a single face in the entire video",
+      "output_path": "String type, output path for result.json, the folder should be created before",
+      "info_path": "String type, external path for method_info.json",
+      "d": "Action true, you should use it when input path is a folder"
+    },
+    "input_size_limit_MB": {
+      "video": 50
+    },
+    "errors": {
+      "size": "Error: File size over limitation.",
+      "format": "Error: Format not match.",
+      "no_face": "Error: No human face detected, please upload videos with human faces."
+    },
+    "timeout_in_sec": 6000
+  }
+}

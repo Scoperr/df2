@@ -1,0 +1,24 @@
+{
+    "Task": "Video Face Forgery Detection",
+    "Input File": "ex1.mp4",
+    "Analytic Name": "AltFreezing",
+    "Analysis Date": "2024-12-22 23:10:23.814989",
+    "Original Result": {
+        "Real Probability": 0.757,
+        "Fake Probability": 0.243
+    },
+    "Original Result Description": "The probability of input video is real",
+    "Result": {
+        "Real Probability": 0.757,
+        "Fake Probability": 0.243
+    },
+    "Result Description": "This sample is likely real.",
+    "Analytic Description": "Deep learning based method for Video Face Forgery Detection that separates the spatial and temporal weights into two groups and alternately freezes one group of weights to encourage the model to capture both the spatial and temporal artifacts.",
+    "Analysis Scope": "Human face videos",
+    "Reference": "https://arxiv.org/abs/2307.08317",
+    "Code Link": "https://github.com/ZhendongWang6/AltFreezing",
+    "Error": "None",
+    "Analysis Time in Second": 595.82,
+    "Device": "cpu",
+    "Advanced Results": "Not Available"
+}
