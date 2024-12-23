@@ -4,7 +4,7 @@ To run locally:
   1. clone repo
   2. pip install -r requirements.txt
   3. store ur test-video in data folder.
-  4. python main.py --input_path data/ex3.mp4 --output_path results --info_path method_info.json --device cpu --checkpoint_path checkpoints/model.pth
+  4. python main.py --input_path data/test_video.mp4 --output_path results --info_path method_info.json --device cpu --checkpoint_path checkpoints/model.pth
 
 To run using Docker:
   1. https://hub.docker.com/r/tarunam172/altfreezing-image2
