@@ -38,7 +38,7 @@ class DeepfakeDetectionModel():
         cfg.freeze()
 
         self.classifier = PluginLoader.get_classifier(cfg.classifier_type)()
-        self.classifier.to('cpu')
+        self.classifier.cuda()
         self.classifier.eval()
         self.classifier.load(self.ckpt_path)
         print(f"Successfully loaded weights from {self.ckpt_path}.")
