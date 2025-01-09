@@ -68,7 +68,7 @@ class DeepfakeDetectionModel():
                 img1 = cv2.resize(images[i], (cfg.imsize, cfg.imsize))
                 img = np.concatenate((img1, images_align[i]), axis=1)
 
-            images = torch.as_tensor(images_align, dtype=torch.float32).to('cpu').permute(3, 0, 1, 2)
+            images = torch.as_tensor(images_align, dtype=torch.float32).cuda().permute(3, 0, 1, 2)
             images = images.unsqueeze(0).sub(mean).div(std)
 
             # Step 3: Model inference (prediction)
