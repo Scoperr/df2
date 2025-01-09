@@ -50,8 +50,8 @@ class DeepfakeDetectionModel():
         self.out_file = os.path.join(self.out_dir, basename)
 
     def predict(self, clips_for_video, data_storage, frame_boxes, frames):
-        mean = torch.tensor([0.485 * 255, 0.456 * 255, 0.406 * 255]).to('cpu').view(1, 3, 1, 1, 1)
-        std = torch.tensor([0.229 * 255, 0.224 * 255, 0.225 * 255]).to('cpu').view(1, 3, 1, 1, 1)
+        mean = torch.tensor([0.485 * 255, 0.456 * 255, 0.406 * 255]).cuda().view(1, 3, 1, 1, 1)
+        std = torch.tensor([0.229 * 255, 0.224 * 255, 0.225 * 255]).cuda().view(1, 3, 1, 1, 1)
         # Step 1: Process the video to extract clips and frames
         clip_size = cfg.clip_size
         preds = []
